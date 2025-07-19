@@ -1,0 +1,255 @@
+nav{
+    flex-direction: column;
+    height: 120px;
+}
+
+.left img{
+    width: 60px;
+}
+nav ul{
+    margin: 10px 20px;
+}
+nav ul li{
+    font-size: 1.3rem;
+    padding: 0 15px 8px 15px;
+    margin: 0 10px 0 10px ;
+}
+
+@media screen and (max-width: 600px){
+    nav{
+        height: 125px;
+    }
+    nav ul li{
+        font-size: 1rem;
+        padding: 0 10px 4px 10px;
+        margin: 0; 
+    }
+}
+
+.firstSection{
+    flex-direction: column;
+    margin:15px
+}
+
+.leftSection{
+    margin: 20px 20px 10px 20px;
+    font-size: 3rem;
+
+}
+.rightSection img{
+    margin: 10px 0px 30px 0;
+}
+
+.about{
+    flex-direction: column-reverse;
+    margin-top: 20px;
+}
+.about img{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.aboutright{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px;
+}
+
+.about div p{
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 0px 20px;
+}
+
+
+.services-container{
+    flex-direction: column;
+    margin: 15px;
+    align-items: center;
+}
+.services-home{
+    margin: 30px 0px 0px 0px;
+}
+
+.services-container .box{
+    width: 80%;
+    margin: 20px;
+    
+}
+.services-container .box:hover {
+    box-shadow: 0 4px 16px 0 rgb(66, 65, 65);
+    transition: 0.3s;
+  }
+
+.services-head-primary{
+    margin: 10px;
+    font-size: 2.6rem;
+}
+
+.services-container .box img{
+    height: 180px
+}
+
+
+.welcome-name-with-dashboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome_name{
+ width: auto;
+}
+
+.user-dashboard{
+    width: 80%;
+    margin: 5% 10% 20% 10%;
+    padding: 1.5rem;
+    height: 560px;
+}
+
+.dashboard-btns{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-history{
+   margin: 20px 0 0 0 ;
+}
+
+.calculator-container{
+    flex-direction: column;
+    margin: 10px;  
+}
+
+.left-container {
+    width: 80%;
+    margin: 40px 100px;
+    padding: 2rem; 
+}
+
+
+.right-container{
+    width: 80%;
+    margin: 40px 100px;
+    padding: 2rem;
+
+} 
+
+.outcomes{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    align-items: center;
+}
+
+.results-container {
+    margin: 20px 20px 0 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.result-card {
+    width:80%;
+    background-color: #5f3165;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.results-container h2 {
+    margin-left: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#outcomes-p {
+    text-align: center;
+    margin-left: 30px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.caution p{
+    font-size: 0.8rem;
+    margin:  0 10px 0 10px ;
+    padding: 10px 10%;
+    text-align: center;
+}
+
+.education-desc{
+    margin:  60px 40px 60px 40px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.card-container{
+    display: grid;
+    margin: 0 50px 0 50px  ;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    width: auto;
+    padding: auto;
+}
+.card-content{
+    text-align: center;
+}
+.card-img {
+    height: 180px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+.products-headline p{
+    padding: 10px 6%;
+    text-align: center;
+}
+
+.products-headline{
+    font-size: 3rem;
+    margin:  60px 40px 40px 40px;
+    text-align: center;
+
+}
+
+.prod-video-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+
+.right-prod-video-section {
+    display: none;
+}
+
+.left-prod-video-section{
+    margin: 50px 20%; 
+    display: flex;
+    align-items: center;  
+}
+
+.products-container{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-prod{
+    width: 85%;
+    margin-bottom: 30px;
+}
+
+.product-grid-pri-heading{
+    font-size: 2rem;
+}
+

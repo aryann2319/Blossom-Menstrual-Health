@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blossom- Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styleEdu.css" />
+    <link rel="stylesheet"media="screen and (max-width: 1075px)"href="phone.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="/images/logo.png" alt="logo" />
+                <a href="home">Blossom</a>
+            </div>
+            <div class="right">
+                <ul> 
+                    <li><a href="home">Home</a></li>
+                    <li><a href="logger">Logger</a></li>
+                    <li><a href="calc">Ovulation</a></li>
+                    <li><a href="Education">Education</a></li>
+                    <li><a href="Products">Products</a></li>
+                </ul>
+            </div> 
+        </nav>
+    </header>
+
+    <div class="education-desc">Understand Your <span class="pink">Menstrual Health</span>
+        <p>Discover valuable insights, tips, and guides to help you take control of your menstrual health and make informed decisions about your body.</p> 
+    </div>
+
+
+    <section class="education-cards">
+    <div class="card-container">
+    <div class="card" onclick="showPopup('Menarche')">
+        <img src="/images/menarche1-edu.png" alt="Card Image" class="card-img" >
+        <div class="card-content"  >
+            <h3 class="card-title">Menarche</h3>
+            <p class="card-text">Menarche is when you get your first period. It is an important milestone that marks the beginning of your fertility.</p>
+        </div>
+    </div>
+    <div class="card" onclick="showPopup('Ovulation')">
+        <img src="/images/ovulation-edu.png" alt="Card Image" class="card-img">
+        <div class="card-content">
+            <h3 class="card-title">Ovulation</h3>
+            <p class="card-text">Ovulation is a phase of the female menstrual cycle that involves the release of an egg (ovum) from one of the ovaries.</p>
+        </div>
+    </div>
+    <div class="card" onclick="showPopup('Pregnancy')">
+        <img src="/images/pregnancy-edu.png" alt="Card Image" class="card-img">
+        <div class="card-content">
+            <h3 class="card-title">Pregnancy</h3>
+            <p class="card-text">Pregnancy is the beautiful phase in which a fetus develops inside a woman's womb. It usually lasts about 40 weeks or 9 months.</p>
+        </div>
+    </div>
+    <div class="card" onclick="showPopup('Contraception')">
+        <img src="/images/contraception-edu.png" alt="Card Image" class="card-img">
+        <div class="card-content">
+            <h3 class="card-title">Contraception</h3>
+            <p class="card-text">Birth control, also known as contraception, is the use of medicines, devices, or surgery to prevent pregnancy.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card" onclick="showPopup('Menopause')">
+            <img src="/images/learninghome.png" alt="Card Image" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Menopause</h3>
+                <p class="card-text">Menopause is a natural process marking the end of a woman’s reproductive years, typically occurring between ages 45 and 55.</p>
+                
+            </div>
+        </div>
+        <div class="card" onclick="showPopup('Self-care')">
+            <img src="/images/selfcare-edu.png" alt="Card Image" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Self Care</h3>
+                <p class="card-text">Prioritize rest, balanced nutrition, and gentle exercise to support your health and baby's development.</p>
+            </div>
+        </div>
+        <div class="card" onclick="showPopup('Consent')">
+            <img src="/images/consent-edu.png" alt="Card Image" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Consent</h3>
+                <p class="card-text">Consent is about giving permission or agreeing to participate in something, especially in relationships. </p>
+                
+            </div>
+        </div>
+        <div class="card" onclick="showPopup('Safety')">
+            <img src="/images/aboutsecimg.png" alt="Card Image" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Safety</h3>
+                <p class="card-text">Managing your period effectively is important for maintaining good hygiene, comfort, and overall health.</p>
+               
+            </div>
+        </div>
+        </div>
+    </section>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h1 id="popup-title"></h1>
+                <p id="popup-text"></p>
+            </div>
+        </div>
+
+    <footer id="foot"> 
+        <div class="footlogo">
+            <img src="/images/logo.png" alt="logo">
+            <a href="index.html">Blossom</a><br>
+        </div>
+        <p id="descp">Blossom is dedicated to empowering users with the tools and knowledge to manage their menstrual health. Our platform offers personalized period tracking and Educational resources.<br>Join us today!</p><br>
+        <p id="credits">Designed by Aryan Maan</p>
+    </footer>
+    <script src="scriptEdu.js"></script>
+  </body>
+</html>

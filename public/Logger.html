@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blossom- Period Logger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="stylelogger.css" />
+    <link rel="stylesheet"media="screen and (max-width: 1075px)"href="phone.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="/images/logo.png" alt="logo" />
+                <a href="home">Blossom</a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="Logger">Logger</a></li>
+                    <li><a href="calc">Ovulation</a></li>
+                    <li><a href="Education">Education</a></li>
+                    <li><a href="Products">Products</a></li>
+                </ul>
+            </div> 
+        </nav>
+    </header>
+    
+
+    <section class="welcome-name-with-dashboard">
+        <div class="welcome_name">Welcome Aboard!
+            <img src="/images/menarche1-edu.png" alt="ovulation"> 
+        </div>
+        <div class="user-dashboard">
+            <h2>Dashboard</h2>
+            <p id="lastperiod-dash">Last Period Started On: Log a period to start</p>
+            <p id="periodlength-dash">Period Lasted For:  </p>  
+            <p id="nextperiod-dash">Your Next Period Will Start On: </p>                                 
+            <span class="dashboard-btns">          
+            <button class="btn-logout" id="btn-logout">Logout</button>             
+            <button class="btn-history" id="historyButton">History</button>    
+
+            <div id="historyModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Period History</h2>
+                    <table id="historyTable">
+                        <thead>
+                            <tr>
+                                <th>Entry Date</th>
+                                <th>Period Start Date</th>
+                                <th>Period Length (Days)</th>
+                                <th>Symptoms</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>          
+            </span>
+        </div>
+    </section>
+ 
+    <hr>
+
+    <section class="calculator-container">
+        <div class="left-container">
+            <h1 id="calch1">Cycle Logger</h1>
+            <p>Enter start date in the cycle logger once your period is over.</p>
+            <form method="post"  id="trackerForm" class="tracker-form">
+                <div class="form-group"> 
+                    <label for="startDate">Last Period Start Date</label>
+                    <input type="date" id="startDate" name="startDate"  required>
+                </div>
+                <div class="form-group">
+                    <label for="cycleLength">Cycle Length (in days)</label>
+                    <div class="cycle-length">
+                        <input type="number" id="cycleLength" name="cycleLength" value="28" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="periodLength">How long did your period last? (in days)</label>
+                    <input type="number" id="periodLength" name="periodLength" value="4" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                <label for="daily-symptoms">Enter Symptoms/Flow</label>
+                    <input type="text" id="daily-symptoms" name="daily-symptoms" placeholder="flow-heavy, severe cramps, NIL" required>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="calculate-btn" onclick="calculateFertility()">Submit</button>                
+                </div>
+            </form>
+        </div>
+
+          <div class="right-container">
+            <h1 id="calch">Pregnancy Calculator</h1>
+            <p> The due date predictor should be seen as an approximate guide rather than an exact prediction. </p> 
+            <img src="/images/pregnancy-edu.png" alt="pregnancy"> 
+            <form id="trackerForm" class="tracker-form">
+                <div class="form-group"> 
+                    <label for="startDate">Last Period Start Date</label>
+                    <input type="date" id="startpDate" name="startpDate"  required>
+                </div>
+                <div class="form-group">
+                    <label for="cycleLength">Average Cycle Length (in days)</label>
+                    <div class="cycle-length">
+                        <input type="number" id="cyclepLength" name="cyclepLength" value="28" required>
+                    </div> 
+                </div>
+                <div class="form-group">
+                    <button type="button" class="calculate-btn" onclick="calculateDueDate()">Calculate Due Date</button>                
+                </div>
+            </form> 
+        </div>
+    </section>
+    
+    <div id="results" class="results-container">
+        <h2>Outcomes</h2>
+        <div class="outcomes">
+            <div id="period-dates" class="result-card"></div>
+            <div id="fertile-window" class="result-card"></div>
+            <div id="ovulation-date" class="result-card"></div>
+            <div id="next-period" class="result-card"></div>
+
+        </div>
+    </div>
+    <div class="caution"><p>*Calculators can help you learn more about your estimated due date and period timeline, but they are not a replacement for medical advice. This tool is just an estiamtion, individual variations may occur. It is recommended to consult a healthcare provider for personalized advice.</p></div>
+
+
+
+    <footer id="foot"> 
+        <div class="footlogo">
+            <img src="/images/logo.png" alt="logo">
+            <a href="index.html">Blossom</a><br>
+        </div>
+        <p id="descp">Blossom is dedicated to empowering users with the tools and knowledge to manage their menstrual health. Our platform offers personalized period tracking and Educational resources.<br>Join us today!</p><br>
+        <p id="credits">Designed by Aryan Maan</p>
+    </footer>
+    <script src="logger.js"></script>
+  </body>
+</html>

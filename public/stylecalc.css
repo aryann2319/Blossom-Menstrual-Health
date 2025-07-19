@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+body{
+    zoom: 80%;
+    background-color: rgb(243, 240, 249);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(236, 213, 233);
+}
+.left img{
+    width: 75px;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+nav ul li{
+    list-style: none;
+    padding: 0 20px;
+    margin: 0 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(210, 112, 213);
+    text-decoration-thickness: 3px;
+}
+
+.left a{
+    text-decoration: none;
+    color: black;
+    font-size: 2.2rem;
+    padding-left: 10px;
+}
+
+
+.ovulation-desc{
+    margin:  60px 40px 20px 40px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.pink{
+    color: #e152c7;
+}
+
+.ovulation-desc p{
+    font-size: 1.3rem;
+    margin: 10px  10px 0 10px ;
+    align-content:space-around;
+    padding: 10px 20%;
+    text-align: center;
+}
+
+.calculator-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px; 
+    align-items: center;
+}
+
+.left-container {
+    width: 636px;
+    margin: 60px 100px;
+    padding: 2rem;
+    background-color: #e7e3f6;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.right-container img{
+    width: 70%;
+    height: 88%;
+    margin: 20px 10% 0 10%;
+}
+
+.right-container{
+    width:40%;
+}
+
+#calch1{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #4A4A4A;
+}
+
+.tracker-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    display: flex;
+    font-size: 1.1rem;
+    color: #333;
+    
+}
+
+input[type="date"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.cycle-length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+button.calculate-btn {
+    background-color: #5f00b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+button.calculate-btn:hover {
+    background-color: #8940d1;
+}
+
+button.reset-btn {
+    background-color: #f43636da;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+
+}
+
+button.reset-btn:hover {
+    background-color: #f28871d0;
+}
+
+
+.results-container {
+    margin: 2rem;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.outcomes{
+    display: flex;
+}
+
+.result-card {
+    width:30%;
+    background-color: #5f3165;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.results-container h2 {
+    margin-left: 30px;
+    font-size: 1.5rem;
+}
+
+#outcomes-p {
+    margin-left: 30px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+/* .result-card p {
+    font-size: 1rem;
+    color: #eaeaea;
+} */
+
+.result-card .date {
+    background-color: #ac609e;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 15px;
+    color: white;
+} 
+
+.result-card h3{
+    margin-bottom: 10px;
+}
+
+.caution p{
+    font-size: 0.8rem;
+    margin: 20px  10px 0 10px ;
+    padding: 10px 10%;
+    text-align: center;
+}
+
+footer{
+    display: block;
+    margin-top: 60px;
+    background-color:rgb(244, 225, 241) ;
+}
+
+.footlogo{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footlogo a{
+    text-decoration: none;
+    color: black;
+    font-size: 2.2rem;
+    padding-left: 10px;
+    justify-content: center;
+}
+.footlogo img{
+    width: 75px;
+}
+footer #descp{
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0px 40px;
+}
+footer #credits{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(241, 206, 237);
+}
+
+
